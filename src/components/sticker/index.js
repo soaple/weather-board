@@ -14,6 +14,12 @@ const RechartsScatterChart = loadable(() => import('./RechartsScatterChart'));
 const RechartsTinyChart = loadable(() => import('./RechartsTinyChart'));
 const RechartsTreeMap = loadable(() => import('./RechartsTreeMap'));
 const RechartsStackedBarChart = loadable(() => import('./RechartsStackedBarChart'));
+// Weather
+const OpenWeatherMap = loadable(() => import('./OpenWeatherMap'));
+const OpenWeatherMap3days = loadable(() => import('./OpenWeatherMap3days'));
+const OpenWeatherMap7days = loadable(() => import('./OpenWeatherMap7days'));
+const YahooWeather = loadable(() => import('./YahooWeather'));
+const YahooWeatherForecast = loadable(() => import('./YahooWeatherForecast'));
 
 export default {
     Recharts: [
@@ -71,6 +77,33 @@ export default {
             Name: 'RechartsStackedBarChart',
             Description: 'RechartsStackedBarChart sample',
             Component: RechartsStackedBarChart,
+        },
+    ],
+    Weather: [
+        {
+            Name: 'OpenWeatherMap',
+            Description: 'OpenWeatherMap sample',
+            Component: OpenWeatherMap,
+        },
+        {
+            Name: 'OpenWeatherMap3days',
+            Description: 'OpenWeatherMap3days sample',
+            Component: OpenWeatherMap3days,
+        },
+        {
+            Name: 'OpenWeatherMap7days',
+            Description: 'OpenWeatherMap7days sample',
+            Component: OpenWeatherMap7days,
+        },
+        {
+            Name: 'YahooWeather',
+            Description: 'YahooWeather sample',
+            Component: YahooWeather,
+        },
+        {
+            Name: 'YahooWeatherForecast',
+            Description: 'YahooWeatherForecast sample',
+            Component: YahooWeatherForecast,
         },
     ],
 };
