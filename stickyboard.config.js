@@ -5,6 +5,6 @@ module.exports = {
     },
     env: {
         NODE_ENV: process.env.NODE_ENV,
-        SAMPLE: process.env.SAMPLE,
+        MAPBOX_TOKEN: JSON.stringify(process.env.MAPBOX_TOKEN),
     },
 };

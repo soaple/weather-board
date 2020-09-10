@@ -4,6 +4,7 @@ import React from 'react';
 
 import Timeline from '@material-ui/icons/Timeline';
 import WbSunny from '@material-ui/icons/WbSunny';
+import Map from '@material-ui/icons/Map';
 
 const SidebarMenuDict = {
     /******************
@@ -22,6 +23,13 @@ const SidebarMenuDict = {
             icon: <WbSunny />,
             url: '/weather',
             value: 102,
+            need_permission: false,
+        },
+        {
+            title: 'MapBox',
+            icon: <Map />,
+            url: '/mapbox',
+            value: 103,
             need_permission: false,
         },
     ],

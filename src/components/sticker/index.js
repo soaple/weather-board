@@ -6,20 +6,26 @@ import loadable from '@loadable/component';
 const RechartsLineChart = loadable(() => import('./RechartsLineChart'));
 const RechartsBarChart = loadable(() => import('./RechartsBarChart'));
 const RechartsComposedChart = loadable(() => import('./RechartsComposedChart'));
-const RechartsMultiLineChart = loadable(() => import('./RechartsMultiLineChart'));
+const RechartsMultiLineChart = loadable(() =>
+    import('./RechartsMultiLineChart')
+);
 const RechartsPieChart = loadable(() => import('./RechartsPieChart'));
 const RechartsAreaChart = loadable(() => import('./RechartsAreaChart'));
 const RechartsRadarChart = loadable(() => import('./RechartsRadarChart'));
 const RechartsScatterChart = loadable(() => import('./RechartsScatterChart'));
 const RechartsTinyChart = loadable(() => import('./RechartsTinyChart'));
 const RechartsTreeMap = loadable(() => import('./RechartsTreeMap'));
-const RechartsStackedBarChart = loadable(() => import('./RechartsStackedBarChart'));
+const RechartsStackedBarChart = loadable(() =>
+    import('./RechartsStackedBarChart')
+);
 // Weather
 const OpenWeatherMap = loadable(() => import('./OpenWeatherMap'));
 const OpenWeatherMap3days = loadable(() => import('./OpenWeatherMap3days'));
 const OpenWeatherMap7days = loadable(() => import('./OpenWeatherMap7days'));
 const YahooWeather = loadable(() => import('./YahooWeather'));
 const YahooWeatherForecast = loadable(() => import('./YahooWeatherForecast'));
+// MapBox
+const WeatherMapBox = loadable(() => import('./WeatherMapBox'));
 
 export default {
     Recharts: [
@@ -104,6 +110,13 @@ export default {
             Name: 'YahooWeatherForecast',
             Description: 'YahooWeatherForecast sample',
             Component: YahooWeatherForecast,
+        },
+    ],
+    MapBox: [
+        {
+            Name: 'WeatherMapBox',
+            Description: 'WeatherMapBox sample',
+            Component: WeatherMapBox,
         },
     ],
 };
