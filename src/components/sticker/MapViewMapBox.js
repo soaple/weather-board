@@ -8,17 +8,11 @@ const sampleInputs = {
         description: 'This component is one of stickers in Stickyboard',
     },
     map: {
-        canvas: {
-            size: {
-                width: '100%`',
-                height: '100%',
-            },
-        },
+        canvas: {},
         camera: {
             center: [-77.04, 38.907],
             zoom: 10,
         },
-
         marker: [
             {
                 coordinates: [-77.038659, 38.931567],
@@ -49,7 +43,6 @@ const sampleInputs = {
                 closeOnClick: true,
             },
         ],
-
         line: [
             {
                 paint: {
@@ -100,8 +93,8 @@ const sampleInputs = {
     },
 };
 
-function WeatherMapBox(props) {
+function MapViewMapBox(props) {
     return <MapBox data={sampleInputs.data} map={sampleInputs.map} />;
 }
 
-export default WeatherMapBox;
+export default MapViewMapBox;

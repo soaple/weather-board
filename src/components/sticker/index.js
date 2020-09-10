@@ -24,8 +24,9 @@ const OpenWeatherMap3days = loadable(() => import('./OpenWeatherMap3days'));
 const OpenWeatherMap7days = loadable(() => import('./OpenWeatherMap7days'));
 const YahooWeather = loadable(() => import('./YahooWeather'));
 const YahooWeatherForecast = loadable(() => import('./YahooWeatherForecast'));
-// MapBox
-const WeatherMapBox = loadable(() => import('./WeatherMapBox'));
+// MapView
+const MapViewMapBox = loadable(() => import('./MapViewMapBox'));
+const MapViewKakaoMap = loadable(() => import('./MapViewKakaoMap'));
 
 export default {
     Recharts: [
@@ -112,11 +113,16 @@ export default {
             Component: YahooWeatherForecast,
         },
     ],
-    MapBox: [
+    Map: [
         {
-            Name: 'WeatherMapBox',
-            Description: 'WeatherMapBox sample',
-            Component: WeatherMapBox,
+            Name: 'MapViewMapBox',
+            Description: 'MapViewMapBox sample',
+            Component: MapViewMapBox,
+        },
+        {
+            Name: 'MapViewKakaoMap',
+            Description: 'MapViewKakaoMap sample',
+            Component: MapViewKakaoMap,
         },
     ],
 };

@@ -25,11 +25,23 @@ const SidebarMenuDict = {
             value: 102,
             need_permission: false,
         },
+    ],
+    /******************
+     * MapView Menus
+     ******************/
+    MAP_VIEW: [
         {
             title: 'MapBox',
             icon: <Map />,
-            url: '/mapbox',
-            value: 103,
+            url: '/mapview/mapbox',
+            value: 201,
+            need_permission: false,
+        },
+        {
+            title: 'KakaoMap',
+            icon: <Map />,
+            url: '/mapview/kakaomap',
+            value: 202,
             need_permission: false,
         },
     ],

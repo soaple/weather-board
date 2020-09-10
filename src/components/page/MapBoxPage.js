@@ -8,11 +8,11 @@ import { Sticker } from '@stickyboard/core';
 import PageBaseContainer from 'redux/containers/PageBaseContainer';
 
 const initialLayout = {
-    lg: [{ i: 'WeatherMapBox', x: 0, y: 0, w: 4, h: 5 }],
-    md: [{ i: 'WeatherMapBox', x: 0, y: 0, w: 4, h: 5 }],
-    sm: [{ i: 'WeatherMapBox', x: 0, y: 0, w: 4, h: 5 }],
-    xs: [{ i: 'WeatherMapBox', x: 0, y: 0, w: 6, h: 5 }],
-    xxs: [{ i: 'WeatherMapBox', x: 0, y: 0, w: 4, h: 5 }],
+    lg: [{ i: 'WeatherMapBox', x: 0, y: 0, w: 12, h: 18 }],
+    md: [{ i: 'WeatherMapBox', x: 0, y: 0, w: 12, h: 18 }],
+    sm: [{ i: 'WeatherMapBox', x: 0, y: 0, w: 12, h: 18 }],
+    xs: [{ i: 'WeatherMapBox', x: 0, y: 0, w: 12, h: 18 }],
+    xxs: [{ i: 'WeatherMapBox', x: 0, y: 0, w: 12, h: 18 }],
 };
 
 const initialBlocks = [{ i: 'WeatherMapBox' }];

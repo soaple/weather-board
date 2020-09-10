@@ -12,7 +12,9 @@ import Layout from './Layout';
 // Component
 const SamplePage= loadable(() => import('components/page/SamplePage'));
 const WeatherPage = loadable(() => import('components/page/WeatherPage'));
-const MapBoxPage = loadable(() => import('components/page/MapBoxPage'));
+// MapView
+const MapViewMapBoxPage = loadable(() => import('components/page/MapViewMapBoxPage'));
+const MapViewKakaoMapPage = loadable(() => import('components/page/MapViewKakaoMapPage'));
 // Not found
 const NotFoundPage= loadable(() => import('components/page/NotFoundPage'));
 
@@ -78,7 +80,9 @@ class App extends React.Component {
                                     {/* Component */}
                                     <Route path='/sample' component={SamplePage} />
                                     <Route path='/weather' component={WeatherPage} />
-                                    <Route path='/mapbox' component={MapBoxPage} />
+                                    {/* MapView */}
+                                    <Route path='/mapview/mapbox' component={MapViewMapBoxPage} />
+                                    <Route path='/mapview/kakaomap' component={MapViewKakaoMapPage} />
                                     {/* Not found */}
                                     <Route path='*' component={NotFoundPage} />
                                 </Switch>
