@@ -15,6 +15,7 @@ const styles = (theme) => ({
 
 const initialLayout = {
     lg: [
+        { i: 'WeatherMarkdown', x: 0, y: 0, w: 4, h: 5 },
         { i: 'OpenWeatherMap', x: 0, y: 0, w: 4, h: 5 },
         { i: 'OpenWeatherMap3days', x: 4, y: 0, w: 8, h: 5 },
         { i: 'OpenWeatherMap7days', x: 0, y: 5, w: 12, h: 6 },
@@ -22,13 +23,15 @@ const initialLayout = {
         { i: 'YahooWeatherForecast', x: 0, y: 11, w: 8, h: 5 },
     ],
     md: [
-        { i: 'OpenWeatherMap', x: 0, y: 0, w: 4, h: 5 },
-        { i: 'OpenWeatherMap3days', x: 4, y: 0, w: 8, h: 5 },
+        { i: 'WeatherMarkdown', x: 0, y: 0, w: 4, h: 5 },
+        { i: 'OpenWeatherMap', x: 4, y: 0, w: 4, h: 5 },
+        { i: 'OpenWeatherMap3days', x: 8, y: 0, w: 4, h: 5 },
         { i: 'OpenWeatherMap7days', x: 0, y: 5, w: 12, h: 6 },
         { i: 'YahooWeather', x: 8, y: 11, w: 4, h: 5 },
         { i: 'YahooWeatherForecast', x: 0, y: 11, w: 8, h: 5 },
     ],
     sm: [
+        { i: 'WeatherMarkdown', x: 0, y: 0, w: 4, h: 5 },
         { i: 'OpenWeatherMap', x: 0, y: 0, w: 4, h: 5 },
         { i: 'OpenWeatherMap3days', x: 4, y: 0, w: 4, h: 5 },
         { i: 'OpenWeatherMap7days', x: 0, y: 5, w: 8, h: 6 },
@@ -36,6 +39,7 @@ const initialLayout = {
         { i: 'YahooWeatherForecast', x: 0, y: 11, w: 4, h: 5 },
     ],
     xs: [
+        { i: 'WeatherMarkdown', x: 0, y: 0, w: 4, h: 5 },
         { i: 'OpenWeatherMap', x: 0, y: 0, w: 6, h: 5 },
         { i: 'OpenWeatherMap3days', x: 0, y: 5, w: 6, h: 5 },
         { i: 'OpenWeatherMap7days', x: 0, y: 10, w: 6, h: 6 },
@@ -43,6 +47,7 @@ const initialLayout = {
         { i: 'YahooWeatherForecast', x: 0, y: 16, w: 6, h: 5 },
     ],
     xxs: [
+        { i: 'WeatherMarkdown', x: 0, y: 0, w: 4, h: 5 },
         { i: 'OpenWeatherMap', x: 0, y: 0, w: 4, h: 5 },
         { i: 'OpenWeatherMap3days', x: 0, y: 5, w: 4, h: 5 },
         { i: 'OpenWeatherMap7days', x: 0, y: 10, w: 4, h: 6 },
@@ -57,6 +62,7 @@ const initialBlocks = [
     { i: 'OpenWeatherMap7days' },
     { i: 'YahooWeather' },
     { i: 'YahooWeatherForecast' },
+    { i: 'WeatherMarkdown' },
 ];
 
 class WeatherPage extends React.Component {
