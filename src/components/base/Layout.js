@@ -94,6 +94,16 @@ const styles = (theme) => ({
     appBarTitleMargin: {
         flex: 1,
     },
+    appBarStickyBoard: {
+        fontSize: 16,
+        paddingRight: 16,
+        color: theme.colors.appBarContentText,
+        textDecoration: 'none',
+        '&:hover': {
+            cursor: 'pointer',
+            color: theme.colors.appBarContentText,
+        },
+    },
     notiIcon: {
         // color: theme.colors.colorDark,
     },
@@ -309,6 +319,25 @@ class Layout extends React.Component {
                                 className={
                                     classes.appBarTitleMargin
                                 }></Typography>
+
+                            <Hidden xsDown>
+                                <a
+                                    className={classes.appBarStickyBoard}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href={'http://stickyboard.co.kr'}>
+                                    Powered by <b>StickyBoard</b>
+                                </a>
+
+                                {/* GitHub Star */}
+                                <iframe
+                                    src="https://ghbtns.com/github-btn.html?user=soaple&repo=stickyboard&type=star&count=true&size=large"
+                                    frameBorder="0"
+                                    scrolling="0"
+                                    width="140px"
+                                    height="30px"
+                                />
+                            </Hidden>
 
                             {/* Theme select menu */}
                             <IconButton

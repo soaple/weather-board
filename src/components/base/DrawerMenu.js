@@ -21,7 +21,7 @@ import SidebarCategoryName from '../../sidebar/SidebarCategoryName';
 
 import Const from '../../constants/Const';
 
-const styles = theme => ({
+const styles = (theme) => ({
     drawerContainer: {
         height: '100%',
     },
@@ -61,19 +61,33 @@ const styles = theme => ({
         fontWeight: 700,
         fontSize: 14,
     },
+    attributionContainer: {
+        position: 'absolute',
+        left: 0,
+        bottom: 0,
+        padding: 16,
+    },
+    attributionItem: {
+        fontSize: 12,
+        color: theme.colors.contentText,
+        textDecoration: 'none',
+        '&:hover': {
+            cursor: 'pointer',
+            color: theme.palette.primary.main,
+        },
+    },
 });
 
 class DrawerMenu extends React.Component {
-
-    constructor (props) {
-        super(props)
+    constructor(props) {
+        super(props);
 
         this.state = {
             permittedMenuDict: {},
-        }
+        };
     }
 
-    componentDidMount () {
+    componentDidMount() {
         this.updatePermittedMenuDict(this.props);
     }
 
@@ -88,11 +102,11 @@ class DrawerMenu extends React.Component {
         } else {
             this.updatePermittedMenuList(props.permissionKeyArray);
         }
-    }
+    };
 
     onSignOutBtnClicked = () => {
-        console.log('clicked')
-    }
+        console.log('clicked');
+    };
 
     updatePermittedMenuList = (permissionKeyArray) => {
         var permittedMenuDict = {};
@@ -102,7 +116,10 @@ class DrawerMenu extends React.Component {
 
             var categoryMenuArray = [];
             categoryMenus.map((menu) => {
-                if (!menu.need_permission || _.contains(permissionKeyArray, menu.url)) {
+                if (
+                    !menu.need_permission ||
+                    _.contains(permissionKeyArray, menu.url)
+                ) {
                     categoryMenuArray.push(menu);
                 }
             });
@@ -113,9 +130,9 @@ class DrawerMenu extends React.Component {
         });
 
         this.setState({ permittedMenuDict: permittedMenuDict });
-    }
+    };
 
-    render () {
+    render() {
         const { classes, theme } = this.props;
         const { permittedMenuDict } = this.state;
 
@@ -130,40 +147,81 @@ class DrawerMenu extends React.Component {
                             <Divider />
                             <List
                                 className={classes.menuItemList}
-                                subheader={categoryMenus.length > 1 ?
-                                    <ListSubheader
-                                        className={classes.menuCategory}
-                                        disableSticky={true}>
-                                        {SidebarCategoryName[sidebarCategoryKey]}
-                                    </ListSubheader> : null}>
+                                subheader={
+                                    categoryMenus.length > 1 ? (
+                                        <ListSubheader
+                                            className={classes.menuCategory}
+                                            disableSticky={true}>
+                                            {
+                                                SidebarCategoryName[
+                                                    sidebarCategoryKey
+                                                ]
+                                            }
+                                        </ListSubheader>
+                                    ) : null
+                                }>
                                 {categoryMenus.map((menu) => {
-                                    let isSelected = menu.url === window.location.pathname;
+                                    let isSelected =
+                                        menu.url === window.location.pathname;
 
                                     return (
                                         <ListItem
                                             button
                                             key={menu.value}
-                                            className={isSelected ? classes.menuItemSelected : classes.menuItem}
-                                            component='a'
+                                            className={
+                                                isSelected
+                                                    ? classes.menuItemSelected
+                                                    : classes.menuItem
+                                            }
+                                            component="a"
                                             href={menu.url}>
                                             <ListItemIcon
                                                 color="inherit"
-                                                className={classes.menuItemIcon}>
+                                                className={
+                                                    classes.menuItemIcon
+                                                }>
                                                 {menu.icon}
                                             </ListItemIcon>
                                             <ListItemText
                                                 disableTypography={true}
                                                 primary={menu.title}
-                                                className={isSelected ? classes.menuItemTextSelected : classes.menuItemText}/>
+                                                className={
+                                                    isSelected
+                                                        ? classes.menuItemTextSelected
+                                                        : classes.menuItemText
+                                                }
+                                            />
                                         </ListItem>
-                                    )
+                                    );
                                 })}
                             </List>
                         </div>
-                    )
+                    );
                 })}
+
+                <div className={classes.attributionContainer}>
+                    <div>
+                        <a
+                            className={classes.attributionItem}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={'https://github.com/soaple/weather-board'}>
+                            GitHub repository <b>WeatherBoard</b>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a
+                            className={classes.attributionItem}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={'http://stickyboard.co.kr'}>
+                            Powered by <b>StickyBoard</b>
+                        </a>
+                    </div>
+                </div>
             </div>
-        )
+        );
     }
 }
 
