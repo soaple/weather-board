@@ -219,6 +219,26 @@ class DrawerMenu extends React.Component {
                             Powered by <b>StickyBoard</b>
                         </a>
                     </div>
+
+                    <div>
+                        <a
+                            className={classes.attributionItem}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.flaticon.com/authors/good-ware"
+                            title="Good Ware">
+                            Icons made by <b>Good Ware</b> from
+                        </a>
+                        <br />
+                        <a
+                            className={classes.attributionItem}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.flaticon.com/"
+                            title="Flaticon">
+                            <b>www.flaticon.com</b>
+                        </a>
+                    </div>
                 </div>
             </div>
         );

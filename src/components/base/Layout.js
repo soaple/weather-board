@@ -105,7 +105,7 @@ const styles = (theme) => ({
         },
     },
     notiIcon: {
-        // color: theme.colors.colorDark,
+        color: theme.colors.appBarContentText,
     },
     notiDrawer: {
         width: '80%',
@@ -130,10 +130,10 @@ const styles = (theme) => ({
         // height: 56,
         backgroundColor: theme.colors.colorArray[0],
     },
-    avatar: {
+    themeSelectIcon: {
         width: 56,
         height: 56,
-        // color: theme.colors.colorDark,
+        color: theme.colors.appBarContentText,
     },
     drawerPaper: {
         width: Const.DRAWER_WIDTH,
@@ -341,7 +341,7 @@ class Layout extends React.Component {
 
                             {/* Theme select menu */}
                             <IconButton
-                                className={classes.avatar}
+                                className={classes.themeSelectIcon}
                                 aria-owns={
                                     isThemeMenuOpened ? 'menu-appbar' : null
                                 }
