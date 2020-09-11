@@ -38,7 +38,7 @@ function MapViewKakaoMap(props) {
             longitude={127.0776020771}
             latitude={37.2479733442}
             dataList={dataListWithDetails}
-            appKey={KAKAO_APP_KEY}
+            appKey={process.env.KAKAO_APP_KEY}
         />
     );
 }

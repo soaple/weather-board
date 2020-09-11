@@ -3,7 +3,7 @@ import { MapBox } from '@stickyboard/mapbox';
 
 const sampleInputs = {
     data: {
-        mapboxKey: MAPBOX_TOKEN,
+        mapboxKey: process.env.MAPBOX_TOKEN,
         title: 'Stickyboard-mapbox example',
         description: 'This component is one of stickers in Stickyboard',
     },
