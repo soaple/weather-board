@@ -205,7 +205,7 @@ class DrawerMenu extends React.Component {
                             className={classes.attributionItem}
                             target="_blank"
                             rel="noopener noreferrer"
-                            href={'https://github.com/soaple/weather-board'}>
+                            href={'https://github.com/soaple/weather-board/'}>
                             GitHub repository <b>WeatherBoard</b>
                         </a>
                     </div>
@@ -215,8 +215,18 @@ class DrawerMenu extends React.Component {
                             className={classes.attributionItem}
                             target="_blank"
                             rel="noopener noreferrer"
-                            href={'http://stickyboard.co.kr'}>
+                            href={'http://stickyboard.co.kr/'}>
                             Powered by <b>StickyBoard</b>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a
+                            className={classes.attributionItem}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={"https://ainize.ai/soaple/weather-board/"}>
+                            Deployed on <b>Ainize</b>
                         </a>
                     </div>
 
