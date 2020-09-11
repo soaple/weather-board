@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="218" height="259" src="https://github.com/soaple/weather-board/blob/master/src/static/image/WeatherBoard_logo.png?raw=true">
+  <img width="256" height="256" src="https://github.com/soaple/weather-board/blob/master/src/static/image/WeatherBoard_logo.png?raw=true">
 </p>
 
 ## WeatherBoard
