@@ -3,8 +3,8 @@ import { MapBox } from '@stickyboard/mapbox';
 
 const sampleInputs = {
     data:{
-        mapboxKey: 'pk.eyJ1IjoiamVlc3ViIiwiYSI6ImNrZTAxemlnOTBmZmYycnA3aG8wcmo1eWkifQ.wTZ5zzP0m-nh8JrhcIu94A',
-        title:'Stickyboard-mapbox example',
+        mapboxKey: MAPBOX_TOKEN,
+        title: 'Stickyboard-mapbox example',
         description: 'This component is one of stickers in Stickyboard',
     },
     map:{
