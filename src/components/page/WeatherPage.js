@@ -25,13 +25,14 @@ const initialLayout = {
     ],
     md: [
         { i: 'WeatherMarkdown', x: 4, y: 5, w: 4, h: 10 },
-        { i: 'WeatherCardList', x: 0, y: 0, w: 4, h: 15 },
+        { i: 'WeatherCardList', x: 0, y: 5, w: 4, h: 10 },
         { i: 'OpenWeatherMap', x: 8, y: 0, w: 4, h: 5 },
         { i: 'OpenWeatherMap3days', x: 8, y: 5, w: 4, h: 5 },
         { i: 'OpenWeatherMap7days', x: 8, y: 10, w: 4, h: 5 },
         { i: 'YahooWeather', x: 8, y: 15, w: 4, h: 6 },
         { i: 'YahooWeatherForecast', x: 0, y: 15, w: 8, h: 6 },
         { i: 'WeatherWordCloud', x: 4, y: 0, w: 4, h: 5 },
+        { i: 'WeatherMQTT', x: 0, y: 0, w: 4, h: 5 },
     ],
     sm: [
         { i: 'WeatherMarkdown', x: 0, y: 0, w: 4, h: 5 },
@@ -71,6 +72,7 @@ const initialBlocks = [
     { i: 'YahooWeather' },
     { i: 'YahooWeatherForecast' },
     { i: 'WeatherWordCloud' },
+    { i: 'WeatherMQTT' },
 ];
 
 class WeatherPage extends React.Component {

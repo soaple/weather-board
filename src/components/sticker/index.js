@@ -27,6 +27,7 @@ const YahooWeatherForecast = loadable(() => import('./YahooWeatherForecast'));
 const WeatherMarkdown = loadable(() => import('./WeatherMarkdown'));
 const WeatherCardList = loadable(() => import('./WeatherCardList'));
 const WeatherWordCloud = loadable(() => import('./WeatherWordCloud'));
+const WeatherMQTT = loadable(() => import('./WeatherMQTT'));
 // MapView
 const MapViewMapBox = loadable(() => import('./MapViewMapBox'));
 const MapViewKakaoMap = loadable(() => import('./MapViewKakaoMap'));
@@ -129,6 +130,11 @@ export default {
             Name: 'WeatherWordCloud',
             Description: 'WeatherWordCloud sample',
             Component: WeatherWordCloud,
+        },
+        {
+            Name: 'WeatherMQTT',
+            Description: 'WeatherMQTT sample',
+            Component: WeatherMQTT,
         },
     ],
     Map: [
