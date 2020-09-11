@@ -25,6 +25,7 @@ const OpenWeatherMap7days = loadable(() => import('./OpenWeatherMap7days'));
 const YahooWeather = loadable(() => import('./YahooWeather'));
 const YahooWeatherForecast = loadable(() => import('./YahooWeatherForecast'));
 const WeatherMarkdown = loadable(() => import('./WeatherMarkdown'));
+const WeatherCardList = loadable(() => import('./WeatherCardList'));
 // MapView
 const MapViewMapBox = loadable(() => import('./MapViewMapBox'));
 const MapViewKakaoMap = loadable(() => import('./MapViewKakaoMap'));
@@ -117,6 +118,11 @@ export default {
             Name: 'WeatherMarkdown',
             Description: 'WeatherMarkdown sample',
             Component: WeatherMarkdown,
+        },
+        {
+            Name: 'WeatherCardList',
+            Description: 'WeatherCardList sample',
+            Component: WeatherCardList,
         },
     ],
     Map: [

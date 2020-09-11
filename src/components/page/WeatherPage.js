@@ -16,6 +16,7 @@ const styles = (theme) => ({
 const initialLayout = {
     lg: [
         { i: 'WeatherMarkdown', x: 0, y: 0, w: 4, h: 5 },
+        { i: 'WeatherCardList', x: 0, y: 0, w: 4, h: 16 },
         { i: 'OpenWeatherMap', x: 0, y: 0, w: 4, h: 5 },
         { i: 'OpenWeatherMap3days', x: 4, y: 0, w: 8, h: 5 },
         { i: 'OpenWeatherMap7days', x: 0, y: 5, w: 12, h: 6 },
@@ -23,15 +24,17 @@ const initialLayout = {
         { i: 'YahooWeatherForecast', x: 0, y: 11, w: 8, h: 5 },
     ],
     md: [
-        { i: 'WeatherMarkdown', x: 0, y: 0, w: 4, h: 5 },
+        { i: 'WeatherMarkdown', x: 4, y: 5, w: 4, h: 5 },
+        { i: 'WeatherCardList', x: 0, y: 0, w: 4, h: 16 },
         { i: 'OpenWeatherMap', x: 4, y: 0, w: 4, h: 5 },
         { i: 'OpenWeatherMap3days', x: 8, y: 0, w: 4, h: 5 },
-        { i: 'OpenWeatherMap7days', x: 0, y: 5, w: 12, h: 6 },
-        { i: 'YahooWeather', x: 8, y: 11, w: 4, h: 5 },
-        { i: 'YahooWeatherForecast', x: 0, y: 11, w: 8, h: 5 },
+        { i: 'OpenWeatherMap7days', x: 8, y: 5, w: 4, h: 5 },
+        { i: 'YahooWeather', x: 8, y: 10, w: 4, h: 6 },
+        { i: 'YahooWeatherForecast', x: 4, y: 10, w: 4, h: 6 },
     ],
     sm: [
         { i: 'WeatherMarkdown', x: 0, y: 0, w: 4, h: 5 },
+        { i: 'WeatherCardList', x: 0, y: 0, w: 4, h: 16 },
         { i: 'OpenWeatherMap', x: 0, y: 0, w: 4, h: 5 },
         { i: 'OpenWeatherMap3days', x: 4, y: 0, w: 4, h: 5 },
         { i: 'OpenWeatherMap7days', x: 0, y: 5, w: 8, h: 6 },
@@ -40,6 +43,7 @@ const initialLayout = {
     ],
     xs: [
         { i: 'WeatherMarkdown', x: 0, y: 0, w: 4, h: 5 },
+        { i: 'WeatherCardList', x: 0, y: 0, w: 4, h: 16 },
         { i: 'OpenWeatherMap', x: 0, y: 0, w: 6, h: 5 },
         { i: 'OpenWeatherMap3days', x: 0, y: 5, w: 6, h: 5 },
         { i: 'OpenWeatherMap7days', x: 0, y: 10, w: 6, h: 6 },
@@ -48,6 +52,7 @@ const initialLayout = {
     ],
     xxs: [
         { i: 'WeatherMarkdown', x: 0, y: 0, w: 4, h: 5 },
+        { i: 'WeatherCardList', x: 0, y: 0, w: 4, h: 16 },
         { i: 'OpenWeatherMap', x: 0, y: 0, w: 4, h: 5 },
         { i: 'OpenWeatherMap3days', x: 0, y: 5, w: 4, h: 5 },
         { i: 'OpenWeatherMap7days', x: 0, y: 10, w: 4, h: 6 },
@@ -57,12 +62,13 @@ const initialLayout = {
 };
 
 const initialBlocks = [
+    { i: 'WeatherMarkdown' },
+    { i: 'WeatherCardList' },
     { i: 'OpenWeatherMap' },
     { i: 'OpenWeatherMap3days' },
     { i: 'OpenWeatherMap7days' },
     { i: 'YahooWeather' },
     { i: 'YahooWeatherForecast' },
-    { i: 'WeatherMarkdown' },
 ];
 
 class WeatherPage extends React.Component {
