@@ -25,7 +25,7 @@
         "@stickyboard/highcharts": "^0.1.7",
         "@stickyboard/kakao-map": "^0.1.0",
         "@stickyboard/mapbox": "^0.1.0",
-        "@stickyboard/markdown": "^0.1.0",
+        "@stickyboard/markdown": "^0.1.1",
         "@stickyboard/mqtt": "^0.1.1",
         "@stickyboard/openweathermap": "^0.1.1",
         "@stickyboard/recharts": "^0.1.18",

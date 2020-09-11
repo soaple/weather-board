@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Markdown } from '@stickyboard/markdown';
 
-const content = "# Today's weather\n## Sunny\n### Forecast";
-
 function WeatherMarkdown(props) {
+    const [content, setContent] = useState(
+        "# Today's weather\n## Sunny\n### Forecast"
+    );
+
     return (
         <Markdown
             editable
             content={content}
             onSave={(content) => {
-                // TODO: save your new content
+                setContent(content);
             }}
         />
     );
