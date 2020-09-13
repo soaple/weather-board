@@ -22,7 +22,7 @@ const initialLayout = {
         { i: 'OpenWeatherMap7days', x: 8, y: 11, w: 4, h: 5 },
         { i: 'YahooWeather', x: 8, y: 16, w: 4, h: 5 },
         { i: 'YahooWeatherForecast', x: 0, y: 16, w: 8, h: 5 },
-        { i: 'WeatherWordCloud', x: 4, y: 0, w: 4, h: 6 },
+        { i: 'MapViewKakaoMap', x: 4, y: 0, w: 4, h: 6 },
         { i: 'WeatherMQTT', x: 0, y: 0, w: 4, h: 6 },
     ],
     md: [
@@ -33,7 +33,7 @@ const initialLayout = {
         { i: 'OpenWeatherMap7days', x: 8, y: 10, w: 4, h: 5 },
         { i: 'YahooWeather', x: 8, y: 15, w: 4, h: 6 },
         { i: 'YahooWeatherForecast', x: 0, y: 15, w: 8, h: 6 },
-        { i: 'WeatherWordCloud', x: 4, y: 0, w: 4, h: 5 },
+        { i: 'MapViewKakaoMap', x: 4, y: 0, w: 4, h: 5 },
         { i: 'WeatherMQTT', x: 0, y: 0, w: 4, h: 5 },
     ],
     sm: [
@@ -44,7 +44,7 @@ const initialLayout = {
         { i: 'OpenWeatherMap7days', x: 0, y: 18, w: 8, h: 6 },
         { i: 'YahooWeather', x: 4, y: 24, w: 4, h: 5 },
         { i: 'YahooWeatherForecast', x: 0, y: 24, w: 4, h: 5 },
-        { i: 'WeatherWordCloud', x: 4, y: 0, w: 4, h: 5 },
+        { i: 'MapViewKakaoMap', x: 4, y: 0, w: 4, h: 5 },
         { i: 'WeatherMQTT', x: 0, y: 0, w: 4, h: 5 },
     ],
     xs: [
@@ -55,7 +55,7 @@ const initialLayout = {
         { i: 'OpenWeatherMap7days', x: 0, y: 25, w: 6, h: 6 },
         { i: 'YahooWeather', x: 0, y: 41, w: 6, h: 5 },
         { i: 'YahooWeatherForecast', x: 0, y: 36, w: 6, h: 5 },
-        { i: 'WeatherWordCloud', x: 0, y: 5, w: 6, h: 5 },
+        { i: 'MapViewKakaoMap', x: 0, y: 5, w: 6, h: 5 },
         { i: 'WeatherMQTT', x: 0, y: 0, w: 6, h: 5 },
     ],
     xxs: [
@@ -66,7 +66,7 @@ const initialLayout = {
         { i: 'OpenWeatherMap7days', x: 0, y: 31, w: 4, h: 6 },
         { i: 'YahooWeather', x: 0, y: 42, w: 4, h: 5 },
         { i: 'YahooWeatherForecast', x: 0, y: 37, w: 4, h: 5 },
-        { i: 'WeatherWordCloud', x: 0, y: 5, w: 4, h: 5 },
+        { i: 'MapViewKakaoMap', x: 0, y: 5, w: 4, h: 5 },
         { i: 'WeatherMQTT', x: 0, y: 0, w: 4, h: 5 },
     ],
 };
@@ -79,7 +79,7 @@ const initialBlocks = [
     { i: 'OpenWeatherMap7days' },
     { i: 'YahooWeather' },
     { i: 'YahooWeatherForecast' },
-    { i: 'WeatherWordCloud' },
+    { i: 'MapViewKakaoMap' },
     { i: 'WeatherMQTT' },
 ];
 
