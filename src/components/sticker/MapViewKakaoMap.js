@@ -13,7 +13,7 @@ const useStyles = makeStyles({
         textAlign: 'center',
     },
     title: {
-      fontSize: 14,
+        fontSize: 14,
     },
     refresh: {
         position: 'fixed',
@@ -22,29 +22,29 @@ const useStyles = makeStyles({
         left: '16px',
         top: '16px',
         zIndex: 1050,
-        backgroundColor:'#03a9f4',
+        backgroundColor: '#03a9f4',
         color: '#fff',
         boxShadow: '0px 3px 10px -1px rgba(0,0,0,0.3)',
-        "&:focus": {
-            backgroundColor:'#03a9f4',
-          },
-        "&:hover": {
-        backgroundColor: '#0398db',
-        }
+        '&:focus': {
+            backgroundColor: '#03a9f4',
+        },
+        '&:hover': {
+            backgroundColor: '#0398db',
+        },
     },
     rIcon: {
-        fontSize:'1.5rem',
+        fontSize: '1.5rem',
     },
     spinner: {
-        zIndex:1050,
+        zIndex: 1050,
     },
     wrapper: {
-        width:'100%',
-        height:'70%',
-        display:'flex',
-        justifyContent:'center',
-        alignItems:'center',
-    }
+        width: '100%',
+        height: '70%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
 });
 
 const cityList = [
@@ -65,50 +65,46 @@ const cityList = [
     'busan',
 ];
 
-const SimpleCard = ({details}) => {
-    
+const SimpleCard = ({ details }) => {
     const classes = useStyles();
-    
+
     return (
-      <Card key={details} className={classes.root}>
-        <CardContent>
-          <Typography className={classes.title} color="textSecondary" gutterBottom>
-            {details.city}
-          </Typography>
-          <Typography variant="h5" component="h2">
-            {details.type}
-          </Typography>
-          <Typography variant="body2" component="p">
-            {details.description}
-          </Typography>
-        </CardContent>
-      </Card>
+        <Card key={details} className={classes.root}>
+            <CardContent>
+                <Typography
+                    className={classes.title}
+                    color="textSecondary"
+                    gutterBottom>
+                    {details.city}
+                </Typography>
+                <Typography variant="h5" component="h2">
+                    {details.type}
+                </Typography>
+                <Typography variant="body2" component="p">
+                    {details.description}
+                </Typography>
+            </CardContent>
+        </Card>
     );
-}  
+};
 
 function MapViewKakaoMap(props) {
-
     const classes = useStyles();
     const [dataObjs, setDataObjs] = useState({});
     const [isLoading, setIsLoading] = useState(false);
 
     const setWeather = async () => {
         let result = {};
-        for(let i=0; i<cityList.length; i++) {
+        for (let i = 0; i < cityList.length; i++) {
             const cityName = cityList[i];
-            await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${process.env.OPEN_WEATHER_MAP_API_KEY}`)
-                .then(res => res.json())
-                .then(data => {
-                    const { 
-                        coord: {
-                            lat,
-                            lon
-                        },
-                        weather: [{
-                            main,
-                            description,
-                            icon
-                        }],
+            await fetch(
+                `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${process.env.OPEN_WEATHER_MAP_API_KEY}`
+            )
+                .then((res) => res.json())
+                .then((data) => {
+                    const {
+                        coord: { lat, lon },
+                        weather: [{ main, description, icon }],
                     } = data;
 
                     result[cityName] = {
@@ -116,16 +112,16 @@ function MapViewKakaoMap(props) {
                         lon: lon,
                         type: main,
                         description: description,
-                        icon: icon
+                        icon: icon,
                     };
                 });
         }
         setDataObjs(result);
-    }
+    };
 
     const createMarkers = () => {
         let result = [];
-        for(let i=0; i<cityList.length; i++) {
+        for (let i = 0; i < cityList.length; i++) {
             const city = cityList[i];
             const data = dataObjs[city];
             result.push(
@@ -136,7 +132,7 @@ function MapViewKakaoMap(props) {
                     details={{
                         city: city,
                         type: data.type,
-                        description: data.description
+                        description: data.description,
                     }}
                     markerImgSrc={`http://openweathermap.org/img/wn/${data.icon}@2x.png`}
                     markerImgWidth={80}
@@ -146,13 +142,13 @@ function MapViewKakaoMap(props) {
             );
         }
         return result;
-    }
+    };
 
     const fetchData = async () => {
         setIsLoading(false);
-        await setWeather(); 
+        await setWeather();
         setIsLoading(true);
-    }
+    };
 
     useEffect(() => {
         fetchData();
@@ -161,19 +157,24 @@ function MapViewKakaoMap(props) {
     return (
         <>
             <IconButton onClick={() => fetchData()} className={classes.refresh}>
-                <RefreshRoundedIcon/>
+                <RefreshRoundedIcon />
             </IconButton>
             <KakaoMap
-                level={13}
-                longitude={127.78725438764981}
-                latitude={35.04976829586501}
+                level={12}
+                longitude={127.857718}
+                latitude={36.516045}
                 appKey={process.env.KAKAO_APP_KEY}
-                zoomable={false}
-            >
-            { isLoading ? createMarkers() : 
-            <div className={classes.wrapper}>
-                <CircularProgress className={classes.spinner} size={50}/>
-            </div> }
+                zoomable={false}>
+                {isLoading ? (
+                    createMarkers()
+                ) : (
+                    <div className={classes.wrapper}>
+                        <CircularProgress
+                            className={classes.spinner}
+                            size={50}
+                        />
+                    </div>
+                )}
             </KakaoMap>
         </>
     );
