@@ -98,7 +98,8 @@ function MapViewKakaoMap(props) {
         for (let i = 0; i < cityList.length; i++) {
             const cityName = cityList[i];
             await fetch(
-                `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${process.env.OPEN_WEATHER_MAP_API_KEY}`
+                // `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${process.env.OPEN_WEATHER_MAP_API_KEY}`
+                `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${'3dae235cf1b980a7814ab71411ea9d3b'}`
             )
                 .then((res) => res.json())
                 .then((data) => {
