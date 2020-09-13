@@ -76,10 +76,10 @@ const ThemeWeather = {
         },
         MuiFab: {
             primary: {
-                backgroundColor: amber[500],
-                color: grey[800],
+                backgroundColor: lightBlue[500],
+                color: '#ffffff',
                 '&:hover': {
-                    backgroundColor: amber[700],
+                    backgroundColor: lightBlue[700],
                 }
             }
         },

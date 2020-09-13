@@ -10,7 +10,6 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 // Layout
 import Layout from './Layout';
 // Component
-const SamplePage= loadable(() => import('components/page/SamplePage'));
 const WeatherPage = loadable(() => import('components/page/WeatherPage'));
 // MapView
 const MapViewMapBoxPage = loadable(() => import('components/page/MapViewMapBoxPage'));
@@ -75,10 +74,9 @@ class App extends React.Component {
                                 selectedThemeKey={selectedThemeKey}
                                 onThemeChange={this.onThemeChange}>
                                 <Switch>
-                                    <Redirect exact from='/' to='/sample' />
+                                    <Redirect exact from='/' to='/weather' />
 
                                     {/* Component */}
-                                    <Route path='/sample' component={SamplePage} />
                                     <Route path='/weather' component={WeatherPage} />
                                     {/* MapView */}
                                     <Route path='/mapview/mapbox' component={MapViewMapBoxPage} />

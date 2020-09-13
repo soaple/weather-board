@@ -10,19 +10,12 @@ const SidebarMenuDict = {
     /******************
      * Component Menus
      ******************/
-    COMPONENTS: [
-        {
-            title: 'Sample',
-            icon: <Timeline />,
-            url: '/sample',
-            value: 101,
-            need_permission: false,
-        },
+    WEATHER: [
         {
             title: 'Weather',
             icon: <WbSunny />,
             url: '/weather',
-            value: 102,
+            value: 101,
             need_permission: false,
         },
     ],

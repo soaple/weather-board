@@ -1,7 +1,7 @@
 // src/sidebar/SidebarCategoryName.js
 
 const SidebarCategoryName = {
-    COMPONENTS: 'COMPONENTS',
+    WEATHER: 'WEATHER',
     MAP_VIEW: 'MAP VIEW',
 }
 
