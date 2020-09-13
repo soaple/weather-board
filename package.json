@@ -23,7 +23,7 @@
         "@stickyboard/card-list": "^0.1.0",
         "@stickyboard/core": "^1.0.10",
         "@stickyboard/highcharts": "^0.1.7",
-        "@stickyboard/kakao-map": "^0.1.1",
+        "@stickyboard/kakao-map": "^0.1.2",
         "@stickyboard/mapbox": "^0.1.1",
         "@stickyboard/markdown": "^0.1.1",
         "@stickyboard/mqtt": "^0.1.1",
