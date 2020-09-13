@@ -163,7 +163,8 @@ function MapViewKakaoMap(props) {
                 level={12}
                 longitude={127.857718}
                 latitude={36.516045}
-                appKey={process.env.KAKAO_APP_KEY}
+                // appKey={process.env.KAKAO_APP_KEY}
+                appKey={'f497469deae5f398968a824a120e5dcc'} // TEMPORARY CODE FOR DEPLOYING
                 zoomable={false}>
                 {isLoading ? (
                     createMarkers()

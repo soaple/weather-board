@@ -3,7 +3,9 @@ import { MapBox } from '@stickyboard/mapbox';
 
 const sampleInputs = {
     data: {
-        mapboxKey: process.env.MAPBOX_TOKEN,
+        // mapboxKey: process.env.MAPBOX_TOKEN,
+        // TEMPORARY CODE FOR DEPLOYING
+        mapboxKey: 'pk.eyJ1Ijoic29hcGxlIiwiYSI6ImNrZXZtMzB4ZTI3cWsyeG9mbTl3enB3a2UifQ.TZ4p8KOtRrQxi5o6lrF8hw',
         title: 'Stickyboard-mapbox example',
         description: 'This component is one of stickers in Stickyboard',
         openweathermapKey: process.env.OPEN_WEATHER_MAP_API_KEY,
